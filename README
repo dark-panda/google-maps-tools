@@ -1,0 +1,49 @@
+
+= GMapsLineEncoder: Encoding GMap Points for Nearly 1/100th of a Century
+
+GMapsLineEncoder encodes an Array of points into Google's encoded polyline
+format. See http://code.google.com/apis/maps/documentation/reference.html for
+details, specifically GPolyline#fromEncoded and GPolygon#fromEncoded.
+
+=== Example
+
+	### ruby
+	encoded = GMapsLineEncoder.encode([ [ 0, 0 ], [ 1, 1 ], [ 5, 5 ] ])
+	puts <<-_JS
+	  map.addOverlay(
+	    GPolygon.fromEncoded({
+	      "polylines": [
+	        #{encoded.merge({
+	          :color => "#0000FF",
+	          :weight => 3,
+	          :opacity => 0.7,
+	          :zoomFactor => 32,
+	          :numLevels => 4
+	        }).to_json}
+	      ],
+	      "fill": true,
+	      "color": "#0000FF",
+	      "opacity": 0.2,
+	      "outline": true
+	     })
+	  );
+	_JS
+
+ This will produce the following Javascript:
+
+	/// javascript
+	map.addOverlay(
+	  GPolygon.fromEncoded({
+	    "polylines": [
+	      {"opacity": 0.7, "levels": "BBB", "points": "??_ibE_ibE_glW_glW",
+	       "weight": 3, "zoomFactor": 32, "color": "#0000FF", "numLevels": 4}
+	    ],
+	    "fill": true,
+	    "color": "#0000FF",
+	    "opacity": 0.2,
+	    "outline": true
+	  })
+	);
+
+Note that in this example we're not worrying about interior rings/holes in the
+polygon or multipolygons or the like.
