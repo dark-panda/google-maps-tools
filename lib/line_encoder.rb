@@ -1,5 +1,5 @@
 
-module GMapsLineEncoder
+module PolylineEncoder
 
 	class << self
 		# Encodes a series of points into Google's encoded polyline format. See
