@@ -10,7 +10,7 @@ module GoogleProjection
 	module InstanceMethods
 		def init_levels(levels = nil)
 			unless @bc
-				levels ||= 18
+				levels ||= 22
 				@bc = []
 				@cc = []
 				@zc = []
