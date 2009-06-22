@@ -1,2 +1,3 @@
 
-require File.join(File.dirname(__FILE__), 'lib', 'line_encoder')
+require File.join(File.dirname(__FILE__), 'lib', 'polyline_encoder')
+
