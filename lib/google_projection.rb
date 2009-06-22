@@ -8,7 +8,7 @@ module GoogleProjection
 	end
 
 	module InstanceMethods
-		def init_levels(levels = nil)
+		def init_levels(levels = nil) #:nodoc:
 			unless @bc
 				levels ||= 22
 				@bc = []
@@ -28,16 +28,27 @@ module GoogleProjection
 			end
 		end
 
-		def from_geometry_to_pixels(wkb, zoom, levels = nil)
+		# Converts from a Geos::Point or WKB in hex or binary to a reprojected
+		# Geos::Point using Google Maps' Mercator projection.
+		def from_geos_to_pixels(geom, zoom, levels = nil)
 			init_levels(levels)
 
-			geom = Geos::WkbReader.new.read_hex(wkb).coord_seq
-			pixels = from_lng_lat_to_pixels(geom.get_x(0), geom.get_y(0), zoom)
-			Geos::WkbWriter.new.write_hex(
-				Geos::WktReader.new.read("POINT(#{pixels.join(' ')})")
-			)
+			geom = case geom
+				when Geos::Point
+					geom
+				when /^[A-Fa-f0-9]+$/
+					Geos::WkbReader.new.read_hex(geom)
+				when String
+					Geos::WkbReader.new.read(geom)
+			end
+
+			coord_seq = geom.coord_seq
+			pixels = from_lng_lat_to_pixels(coord_seq.get_x(0), coord_seq.get_y(0), zoom)
+			Geos::WktReader.new.read("POINT(#{pixels.join(' ')})")
 		end
 
+		# Converts from lng and lat values into Google Maps' Mercator
+		# projection.
 		def from_lng_lat_to_pixels(lng, lat, zoom, levels = nil)
 			init_levels(levels)
 
@@ -48,12 +59,16 @@ module GoogleProjection
 			return [ e, g ]
 		end
 
+		# Converts from lat and lng values into Google Maps' Mercator
+		# projection.
 		def from_lat_lng_to_pixels(lat, lng, zoom, levels = nil)
-			init_levels(levels)
-
-			from_lng_lat_to_pixels(lng, lat, zoom, levels = nil)
+			from_lng_lat_to_pixels(lng, lat, zoom, levels)
 		end
 
+		# Converts from Google Maps' Mercator pixel projection into
+		# approximately WGS84 longlat. Note that you'll be losing some
+		# precision during the conversion as pixels are rounded off into
+		# integers.
 		def from_pixels_to_lng_lat(x, y, zoom, levels = nil)
 			init_levels(levels)
 
@@ -64,14 +79,14 @@ module GoogleProjection
 			return [ f, h ]
 		end
 
+		# Same as from_pixels_to_lng_lat but with the return Array reversed
+		# to latlong.
 		def from_pixels_to_lat_lng(x, y, zoom, levels = nil)
-			init_levels(levels)
-
-			from_pixels_to_lng_lat(x, y, zoom).reverse
+			from_pixels_to_lng_lat(x, y, zoom, levels).reverse
 		end
 
 		protected
-			def minmax(a, b, c)
+			def minmax(a, b, c) #:nodoc:
 				[ [ a, b ].max, c ].min
 			end
 	end
