@@ -85,6 +85,11 @@ module GoogleProjection
 			from_pixels_to_lng_lat(x, y, zoom, levels).reverse
 		end
 
+		# Converts from pixels to tile coordinates.
+		def from_pixels_to_tiles(x, y, zoom, levels = nil)
+			[ (x / 256.0).floor, (y / 256.0).floor ]
+		end
+
 		protected
 			def minmax(a, b, c) #:nodoc:
 				[ [ a, b ].max, c ].min
