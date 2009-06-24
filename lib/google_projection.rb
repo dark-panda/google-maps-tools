@@ -86,7 +86,7 @@ module GoogleProjection
 		end
 
 		# Converts from pixels to tile coordinates.
-		def from_pixels_to_tiles(x, y, zoom, levels = nil)
+		def from_pixels_to_tile(x, y, zoom, levels = nil)
 			[ (x / 256.0).floor, (y / 256.0).floor ]
 		end
 
