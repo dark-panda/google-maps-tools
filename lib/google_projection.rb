@@ -30,7 +30,7 @@ module GoogleProjection
 
 		# Converts from a Geos::Point or WKB in hex or binary to a reprojected
 		# Geos::Point using Google Maps' Mercator projection.
-		def from_geos_to_pixels(geom, zoom, levels = nil)
+		def from_geos_to_pixel(geom, zoom, levels = nil)
 			init_levels(levels)
 
 			geom = case geom
@@ -43,13 +43,13 @@ module GoogleProjection
 			end
 
 			coord_seq = geom.coord_seq
-			pixels = from_lng_lat_to_pixels(coord_seq.get_x(0), coord_seq.get_y(0), zoom)
-			Geos::WktReader.new.read("POINT(#{pixels.join(' ')})")
+			pixel = from_lng_lat_to_pixel(coord_seq.get_x(0), coord_seq.get_y(0), zoom)
+			Geos::WktReader.new.read("POINT(#{pixel.join(' ')})")
 		end
 
 		# Converts from lng and lat values into Google Maps' Mercator
 		# projection.
-		def from_lng_lat_to_pixels(lng, lat, zoom, levels = nil)
+		def from_lng_lat_to_pixel(lng, lat, zoom, levels = nil)
 			init_levels(levels)
 
 			d = @zc[zoom]
@@ -61,15 +61,15 @@ module GoogleProjection
 
 		# Converts from lat and lng values into Google Maps' Mercator
 		# projection.
-		def from_lat_lng_to_pixels(lat, lng, zoom, levels = nil)
-			from_lng_lat_to_pixels(lng, lat, zoom, levels)
+		def from_lat_lng_to_pixel(lat, lng, zoom, levels = nil)
+			from_lng_lat_to_pixel(lng, lat, zoom, levels)
 		end
 
 		# Converts from Google Maps' Mercator pixel projection into
 		# approximately WGS84 longlat. Note that you'll be losing some
 		# precision during the conversion as pixels are rounded off into
 		# integers.
-		def from_pixels_to_lng_lat(x, y, zoom, levels = nil)
+		def from_pixel_to_lng_lat(x, y, zoom, levels = nil)
 			init_levels(levels)
 
 			e = @zc[zoom]
@@ -79,14 +79,14 @@ module GoogleProjection
 			return [ f, h ]
 		end
 
-		# Same as from_pixels_to_lng_lat but with the return Array reversed
+		# Same as from_pixel_to_lng_lat but with the return Array reversed
 		# to latlong.
-		def from_pixels_to_lat_lng(x, y, zoom, levels = nil)
-			from_pixels_to_lng_lat(x, y, zoom, levels).reverse
+		def from_pixel_to_lat_lng(x, y, zoom, levels = nil)
+			from_pixel_to_lng_lat(x, y, zoom, levels).reverse
 		end
 
 		# Converts from pixels to tile coordinates.
-		def from_pixels_to_tile(x, y, zoom, levels = nil)
+		def from_pixel_to_tile(x, y, zoom, levels = nil)
 			[ (x / 256.0).floor, (y / 256.0).floor ]
 		end
 
