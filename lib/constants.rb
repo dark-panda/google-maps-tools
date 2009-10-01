@@ -35,15 +35,18 @@ module GoogleMaps
 			:premise => 9
 		}.freeze
 
-		# http://code.google.com/apis/maps/documentation/geocoding/#GeocodingResponses
+		# http://code.google.com/apis/maps/documentation/reference.html#GGeoStatusCode
 		GEO_STATUS_CODES = {
-			:success => 200,
-			:server_error => 500,
-			:missing_query => 601,
-			:unknown_address => 602,
+			:success             => 200,
+			:bad_request         => 400,
+			:server_error        => 500,
+			:missing_query       => 601,
+			:missing_address     => 602,
+			:unknown_address     => 602,
 			:unavailable_address => 603,
-			:bad_key => 610,
-			:too_many_queries => 620
+			:unknown_directions  => 604,
+			:bad_key             => 610,
+			:too_many_queries    => 620
 		}.freeze
 	end
 end
