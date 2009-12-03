@@ -16,7 +16,8 @@ module GoogleMaps
 		attr_reader :total_points
 
 		def initialize(*args)
-			raise ArgumentError.new unless args.length.between?(0, 3)
+			raise ArgumentError.new("wrong number of arguments (#{args.length} for 0-3)") unless
+				args.length.between?(0, 3)
 
 			@clusters = Hash.new
 			@total_points = 0
@@ -41,7 +42,7 @@ module GoogleMaps
 
 		private
 			def add_markers(*args)
-				raise ArgumentError.new("wrong number of arguments (#{args.length}) for 1") unless
+				raise ArgumentError.new("wrong number of arguments (#{args.length} for 1-3)") unless
 					args.length.between?(1, 3)
 
 				options = {
