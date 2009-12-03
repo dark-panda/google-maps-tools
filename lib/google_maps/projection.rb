@@ -120,7 +120,7 @@ module GoogleMaps
 			# Converts from lng/lat to meters.
 			def from_lng_lat_to_meters(lng, lat)
 				x = lng * ORIGIN_SHIFT / 180.0
-				y = 	Math.log(Math.tan((90 + lat) * Math::PI / 360.0)) /
+				y =	Math.log(Math.tan((90 + lat) * Math::PI / 360.0)) /
 					(Math::PI / 180.0) *
 					(ORIGIN_SHIFT / 180.0)
 				[ x, y ]
