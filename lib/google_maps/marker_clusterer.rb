@@ -63,7 +63,7 @@ module GoogleMaps
 
 				zoom_range = 0..(zoom || -1)
 
-				markers.each do |marker|
+				(markers || []).each do |marker|
 					quad_tree = if options[:quad_tree_field].is_a?(Proc)
 						options[:quad_tree_field].call(marker)[zoom_range]
 					elsif marker.respond_to?(options[:quad_tree_field])
