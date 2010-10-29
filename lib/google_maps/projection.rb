@@ -59,6 +59,23 @@ module GoogleMaps
 				Geos::WktReader.new.read("POINT(#{pixel.join(' ')})")
 			end
 
+			# Converts from a Geos::Point to meters as per Google Maps' Mercator
+			# projection.
+			def from_geos_to_meters(geom)
+				geom = case geom
+					when Geos::Geometry
+						geom
+					when /^[A-Fa-f0-9]+$/
+						Geos::WkbReader.new.read_hex(geom)
+					when String
+						Geos::WkbReader.new.read(geom)
+				end
+
+				coord_seq = geom.centroid.coord_seq
+				pixel = from_lng_lat_to_meters(coord_seq.get_x(0), coord_seq.get_y(0))
+				Geos::WktReader.new.read("POINT(#{pixel.join(' ')})")
+			end
+
 			# Converts from lng and lat values into Google Maps' Mercator
 			# projection.
 			def from_lng_lat_to_pixel(lng, lat, zoom, levels = nil)
