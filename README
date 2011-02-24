@@ -13,7 +13,7 @@ details, specifically GPolyline#fromEncoded and GPolygon#fromEncoded.
 === Example
 
 	### ruby
-	encoded = GoogleMaps::PolylineEncoder.encode([ [ 0, 0 ], [ 1, 1 ], [ 5, 5 ] ])
+	encoded = GoogleMapsTools::PolylineEncoder.encode([ [ 0, 0 ], [ 1, 1 ], [ 5, 5 ] ])
 	puts <<-_JS
 	  map.addOverlay(
 	    GPolygon.fromEncoded({
@@ -53,7 +53,7 @@ details, specifically GPolyline#fromEncoded and GPolygon#fromEncoded.
 Note that in this example we're not worrying about interior rings/holes in the
 polygon or multipolygons or the like.
 
-== GoogleMaps::Projection
+== GoogleMapsTools::Projection
 
 Implements Google's crazy Mercator projection used by most (all?) of their
 tile layers on Google Maps. See some of the blog posts at
@@ -63,14 +63,14 @@ Google's projection works.
 === Examples
 
 	### ruby
-	p GoogleMaps::Projection.from_geometry_to_pixels('010100000088D51F6118704EC057B2632310D54640', 10)
+	p GoogleMapsTools::Projection.from_geometry_to_pixels('010100000088D51F6118704EC057B2632310D54640', 10)
 	# => "010100000000000000802DF54000000000B0DAF640"
-	p GoogleMaps::Projection.from_lng_lat_to_pixels(-60.875744, 45.664555, 10)
+	p GoogleMapsTools::Projection.from_lng_lat_to_pixels(-60.875744, 45.664555, 10)
 	# => [86744, 93611]
-	p GoogleMaps::Projection.from_pixels_to_lng_lat(86744, 93611, 10)
+	p GoogleMapsTools::Projection.from_pixels_to_lng_lat(86744, 93611, 10)
 	# => [-60.875244140625, 45.664926152966]
 
-== GoogleMaps::QuadTree
+== GoogleMapsTools::QuadTree
 
 Implements a quad tree for latitude/longitude pairs that can be used as the
 basis of a clustering solution.
@@ -78,7 +78,7 @@ basis of a clustering solution.
 === Examples
 
 	### ruby
-	p GoogleMaps::QuadTree.from_lng_lat_to_quad_tree(-79.849052, 43.51968, 19)
+	p GoogleMapsTools::QuadTree.from_lng_lat_to_quad_tree(-79.849052, 43.51968, 19)
 	# => "0302231320112333113"
-	p GoogleMaps::QuadTree.from_lng_lat_to_quad_tree(-79.849052, 43.51968, 50)
+	p GoogleMapsTools::QuadTree.from_lng_lat_to_quad_tree(-79.849052, 43.51968, 50)
 	# => "03022313201123331132332221332332311203231333300012"

@@ -1,5 +1,5 @@
 
-module GoogleMaps
+module GoogleMapsTools
 	module PolylineEncoder
 
 		class << self

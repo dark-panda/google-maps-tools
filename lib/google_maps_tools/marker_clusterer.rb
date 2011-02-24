@@ -1,5 +1,5 @@
 
-module GoogleMaps
+module GoogleMapsTools
 	class QuadTreeFieldNotFound < Exception
 		def initialize(marker)
 			super("Couldn't find quad tree field for marker #{marker.inspect}")

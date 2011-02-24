@@ -1,5 +1,5 @@
 
-module GoogleMaps
+module GoogleMapsTools
 	# Much of the code in this module is based on...
 	#
 	# * Google's own projection documentation:

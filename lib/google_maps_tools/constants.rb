@@ -1,5 +1,5 @@
 
-module GoogleMaps
+module GoogleMapsTools
 	module Constants
 		# http://code.google.com/apis/maps/documentation/reference.html#GGeoAddressAccuracy
 		GEO_ADDRESS_ACCURACY = {

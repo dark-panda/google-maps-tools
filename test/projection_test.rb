@@ -8,7 +8,7 @@ rescue LoadError
 end
 
 class ValidatesProjectionTest < Test::Unit::TestCase
-	include GoogleMaps::Projection
+	include GoogleMapsTools::Projection
 
 	def test_from_geos_to_pixel
 		if defined?(Geos)

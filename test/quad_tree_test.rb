@@ -8,7 +8,7 @@ rescue LoadError
 end
 
 class ValidatesQuadTreeTest < Test::Unit::TestCase
-	include GoogleMaps::QuadTree
+	include GoogleMapsTools::QuadTree
 
 	def test_from_quad_tree_to_lat_lng_bounds
 		quad_trees = [

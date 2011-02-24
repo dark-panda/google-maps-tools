@@ -50,7 +50,7 @@ class ValidatesMarkerClustererTest < Test::Unit::TestCase
 		end
 
 		MAX_ZOOM.downto(0) do |zoom|
-			c = GoogleMaps::MarkerClusterer.new(markers, zoom)
+			c = GoogleMapsTools::MarkerClusterer.new(markers, zoom)
 			assert_equal([ c.clusters.length, c.singles.length ], EXPECTED_CLUSTERS_AND_SINGLES_COUNTS[MAX_ZOOM - zoom])
 		end
 	end

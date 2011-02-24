@@ -1,5 +1,5 @@
 
-module GoogleMaps
+module GoogleMapsTools
 	# An implementation of a quad tree for clustering points on a Google Map.
 	# (Or for that matter, any sort of slippy map that uses Google's projection,
 	# a.k.a. EPSG:900913, a.k.a. EPSG:3857, a.k.a. EPSG:3785.)
@@ -20,7 +20,7 @@ module GoogleMaps
 		end
 
 		module InstanceMethods
-			include GoogleMaps::Projection
+			include GoogleMapsTools::Projection
 
 			# Creates a quad tree key based on tiles and the zoom level.
 			def quad_tree(tx, ty, zoom)
