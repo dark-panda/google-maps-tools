@@ -1,9 +1,9 @@
 
 require 'test/unit'
-require 'lib/google_maps/projection'
+require File.join(File.dirname(__FILE__), %w{ .. lib google_maps_tools })
 
 begin
-	require 'geos'
+	require 'ffi-geos'
 rescue LoadError
 end
 

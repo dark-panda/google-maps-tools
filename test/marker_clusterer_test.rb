@@ -1,7 +1,7 @@
 
 require 'test/unit'
 require 'yaml'
-require 'lib/google_maps/marker_clusterer'
+require File.join(File.dirname(__FILE__), %w{ .. lib google_maps_tools })
 
 class Marker < Struct.new(:id, :quad_tree, :lng, :lat)
 end
