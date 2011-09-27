@@ -5,7 +5,7 @@ module GoogleMapsTools
 	autoload :Constants,
 		File.join(GOOGLE_MAPS_TOOLS_BASE, %w{ google_maps_tools constants })
 	autoload :MarkerClusterer,
-		File.join(GOOGLE_MAPS_TOOLS_BASE, %w{ google_maps_tools active_record_extensions })
+		File.join(GOOGLE_MAPS_TOOLS_BASE, %w{ google_maps_tools marker_clusterer })
 	autoload :PolylineEncoder,
 		File.join(GOOGLE_MAPS_TOOLS_BASE, %w{ google_maps_tools polyline_encoder })
 	autoload :Projection,
