@@ -21,7 +21,7 @@ module GoogleMapsTools
 
     module InstanceMethods
       def init_levels(levels = nil) #:nodoc:
-        unless @bc
+        unless defined?(@bc)
           levels ||= 22
           @bc = []
           @cc = []
