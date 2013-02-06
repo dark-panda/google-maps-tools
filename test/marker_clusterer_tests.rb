@@ -1,12 +1,13 @@
+# encoding: UTF-8
 
-require 'test/unit'
+$: << File.dirname(__FILE__)
+require 'test_helper'
 require 'yaml'
-require File.join(File.dirname(__FILE__), %w{ .. lib google_maps_tools })
 
 class Marker < Struct.new(:id, :quad_tree, :lng, :lat)
 end
 
-class ValidatesMarkerClustererTest < Test::Unit::TestCase
+class ValidatesMarkerClustererTest < MiniTest::Unit::TestCase
   MAX_ZOOM = 22
 
   MARKERS = YAML.load(

@@ -1,13 +1,14 @@
+# encoding: UTF-8
 
-require 'test/unit'
-require File.join(File.dirname(__FILE__), %w{ .. lib google_maps_tools })
+$: << File.dirname(__FILE__)
+require 'test_helper'
 
 begin
   require 'ffi-geos'
 rescue LoadError
 end
 
-class ValidatesProjectionTest < Test::Unit::TestCase
+class ValidatesProjectionTest < MiniTest::Unit::TestCase
   include GoogleMapsTools::Projection
 
   def test_from_geos_to_pixel

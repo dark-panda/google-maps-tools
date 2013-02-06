@@ -1,0 +1,82 @@
+
+= Google Maps Tools
+
+The Google Maps Tools plugin provides a handful of useful tools and utilities
+for messing around with Google Maps.
+
+== PolylineEncoder
+
+PolylineEncoder encodes an Array of points into Google's encoded polyline
+format. See http://code.google.com/apis/maps/documentation/reference.html for
+details, specifically GPolyline#fromEncoded and GPolygon#fromEncoded.
+
+=== Example
+
+  ### ruby
+  encoded = GoogleMapsTools::PolylineEncoder.encode([ [ 0, 0 ], [ 1, 1 ], [ 5, 5 ] ])
+  puts <<-_JS
+    map.addOverlay(
+      GPolygon.fromEncoded({
+        "polylines": [
+          #{encoded.merge({
+            :color => "#0000FF",
+            :weight => 3,
+            :opacity => 0.7,
+            :zoomFactor => 32,
+            :numLevels => 4
+          }).to_json}
+        ],
+        "fill": true,
+        "color": "#0000FF",
+        "opacity": 0.2,
+        "outline": true
+       })
+    );
+  _JS
+
+This will produce the following Javascript:
+
+  /// javascript
+  map.addOverlay(
+    GPolygon.fromEncoded({
+      "polylines": [
+        {"opacity": 0.7, "levels": "BBB", "points": "??_ibE_ibE_glW_glW",
+         "weight": 3, "zoomFactor": 32, "color": "#0000FF", "numLevels": 4}
+      ],
+      "fill": true,
+      "color": "#0000FF",
+      "opacity": 0.2,
+      "outline": true
+    })
+  );
+
+Note that in this example we're not worrying about interior rings/holes in the
+polygon or multipolygons or the like.
+
+== GoogleMapsTools::Projection
+
+Implements Google's crazy Mercator projection used by most (all?) of their
+tile layers on Google Maps. See some of the blog posts at
+http://cfis.savagexi.com/2006/05/ for a bit of an explanation as to how
+Google's projection works.
+
+=== Examples
+
+  p GoogleMapsTools::Projection.from_geometry_to_pixels('010100000088D51F6118704EC057B2632310D54640', 10)
+  # => "010100000000000000802DF54000000000B0DAF640"
+  p GoogleMapsTools::Projection.from_lng_lat_to_pixels(-60.875744, 45.664555, 10)
+  # => [86744, 93611]
+  p GoogleMapsTools::Projection.from_pixels_to_lng_lat(86744, 93611, 10)
+  # => [-60.875244140625, 45.664926152966]
+
+== GoogleMapsTools::QuadTree
+
+Implements a quad tree for latitude/longitude pairs that can be used as the
+basis of a clustering solution.
+
+=== Examples
+
+  p GoogleMapsTools::QuadTree.from_lng_lat_to_quad_tree(-79.849052, 43.51968, 19)
+  # => "0302231320112333113"
+  p GoogleMapsTools::QuadTree.from_lng_lat_to_quad_tree(-79.849052, 43.51968, 50)
+  # => "03022313201123331132332221332332311203231333300012"

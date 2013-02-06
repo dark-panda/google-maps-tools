@@ -1,13 +1,14 @@
+# encoding: UTF-8
 
-require 'test/unit'
-require File.join(File.dirname(__FILE__), %w{ .. lib google_maps_tools })
+$: << File.dirname(__FILE__)
+require 'test_helper'
 
 begin
   require 'ffi-geos'
 rescue LoadError
 end
 
-class ValidatesQuadTreeTest < Test::Unit::TestCase
+class ValidatesQuadTreeTest < MiniTest::Unit::TestCase
   include GoogleMapsTools::QuadTree
 
   def test_from_quad_tree_to_lat_lng_bounds
