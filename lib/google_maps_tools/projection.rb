@@ -156,7 +156,7 @@ module GoogleMapsTools
           (2 * Math.atan(Math.exp(
             ((y / ORIGIN_SHIFT) * 180.0) * Math::PI / 180.0)
           ) - (Math::PI / 2.0))
-        [ lat, lng ]
+        [ lng, lat ]
       end
 
       # Same as from_meters_to_lng_lat but with the output coordinates
