@@ -84,6 +84,19 @@ module GoogleMapsTools
         [ bounds[1], bounds[0], bounds[3], bounds[2] ]
       end
 
+      # Converts from a quad tree to a JSON-able Hash containing the
+      # cardinal points of the bbox.
+      def from_quad_tree_to_bbox(qt)
+        bounds = from_quad_tree_to_lat_lng_bounds(qt)
+
+        {
+          :s => bounds[0],
+          :w => bounds[1],
+          :n => bounds[2],
+          :e => bounds[3]
+        }
+      end
+
       # Creates a quad tree key using a Geos object. The geom can be
       # passed as a Geos::Geometry object, a String in WKB in either hex
       # or binary, or a String in WKT. When the geom is anything other
