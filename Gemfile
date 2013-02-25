@@ -7,7 +7,6 @@ gem "rake", "~> 10.0"
 gem "minitest"
 gem "minitest-reporters"
 gem "guard-minitest"
-gem "ffi-geos"
 
 if RUBY_VERSION >= '1.9'
   gem "simplecov"
