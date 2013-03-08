@@ -1,0 +1,49 @@
+{
+  "status": "OK",
+  "results": [ {
+    "types": [ "sublocality", "political" ],
+    "formatted_address": "Cranberry Township, PA 16323, USA",
+    "address_components": [ {
+      "long_name": "Cranberry Township",
+      "short_name": "Cranberry Township",
+      "types": [ "sublocality", "political" ]
+    }, {
+      "long_name": "Cranberry",
+      "short_name": "Cranberry",
+      "types": [ "administrative_area_level_3", "political" ]
+    }, {
+      "long_name": "Venango",
+      "short_name": "Venango",
+      "types": [ "administrative_area_level_2", "political" ]
+    }, {
+      "long_name": "Pennsylvania",
+      "short_name": "PA",
+      "types": [ "administrative_area_level_1", "political" ]
+    }, {
+      "long_name": "United States",
+      "short_name": "US",
+      "types": [ "country", "political" ]
+    }, {
+      "long_name": "16323",
+      "short_name": "16323",
+      "types": [ "postal_code" ]
+    } ],
+    "geometry": {
+      "location": {
+        "lat": 41.3495288,
+        "lng": -79.7575839
+      },
+      "location_type": "APPROXIMATE",
+      "viewport": {
+        "southwest": {
+          "lat": 41.3411520,
+          "lng": -79.7735913
+        },
+        "northeast": {
+          "lat": 41.3579045,
+          "lng": -79.7415765
+        }
+      }
+    }
+  } ]
+}

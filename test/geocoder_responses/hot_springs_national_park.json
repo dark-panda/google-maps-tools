@@ -1,0 +1,67 @@
+{
+  "status": "OK",
+  "results": [ {
+    "types": [ "park", "park", "establishment" ],
+    "formatted_address": "Hot Springs National Park, 101 Reserve St, Hot Springs, AR 71901-4195, USA",
+    "address_components": [ {
+      "long_name": "Hot Springs National Park",
+      "short_name": "Hot Springs National Park",
+      "types": [ "establishment" ]
+    }, {
+      "long_name": "101",
+      "short_name": "101",
+      "types": [ "street_number" ]
+    }, {
+      "long_name": "Reserve St",
+      "short_name": "Reserve St",
+      "types": [ "route" ]
+    }, {
+      "long_name": "Hot Springs",
+      "short_name": "Hot Springs",
+      "types": [ "locality", "political" ]
+    }, {
+      "long_name": "Garland",
+      "short_name": "Garland",
+      "types": [ "administrative_area_level_2", "political" ]
+    }, {
+      "long_name": "Arkansas",
+      "short_name": "AR",
+      "types": [ "administrative_area_level_1", "political" ]
+    }, {
+      "long_name": "United States",
+      "short_name": "US",
+      "types": [ "country", "political" ]
+    }, {
+      "long_name": "71901-4195",
+      "short_name": "71901-4195",
+      "types": [ "postal_code" ]
+    } ],
+    "geometry": {
+      "location": {
+        "lat": 34.5319461,
+        "lng": -93.0325855
+      },
+      "location_type": "APPROXIMATE",
+      "viewport": {
+        "southwest": {
+          "lat": 34.4951697,
+          "lng": -93.0966152
+        },
+        "northeast": {
+          "lat": 34.5687062,
+          "lng": -92.9685558
+        }
+      },
+      "bounds": {
+        "southwest": {
+          "lat": 34.4994216,
+          "lng": -93.1137840
+        },
+        "northeast": {
+          "lat": 34.5601861,
+          "lng": -93.0184888
+        }
+      }
+    }
+  } ]
+}

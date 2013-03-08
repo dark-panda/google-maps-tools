@@ -22,4 +22,7 @@ Google's projection works.
 Implements a quad tree for latitude/longitude pairs that can be used as the
 basis of a clustering solution.
 
+== GoogleMapsTools::GeocoderResponse
+
+Wraps a Google Maps API 3-style geocoder response into a useful structure.
 

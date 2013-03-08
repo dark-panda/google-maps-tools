@@ -4,6 +4,8 @@ module GoogleMapsTools
 
   autoload :Constants,
     File.join(GOOGLE_MAPS_TOOLS_BASE, %w{ google_maps_tools constants })
+  autoload :GeocoderResponse,
+    File.join(GOOGLE_MAPS_TOOLS_BASE, %w{ google_maps_tools geocoder_response })
   autoload :MarkerClusterer,
     File.join(GOOGLE_MAPS_TOOLS_BASE, %w{ google_maps_tools marker_clusterer })
   autoload :PolylineEncoder,

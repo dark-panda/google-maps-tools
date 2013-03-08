@@ -1,0 +1,51 @@
+{
+  "status": "OK",
+  "results": [ {
+    "types": [ "administrative_area_level_3", "political" ],
+    "formatted_address": "Squamish, BC, Canada",
+    "address_components": [ {
+      "long_name": "Squamish",
+      "short_name": "Squamish",
+      "types": [ "administrative_area_level_3", "political" ]
+    }, {
+      "long_name": "Squamish-Lillooet Regional District",
+      "short_name": "Squamish-Lillooet Regional District",
+      "types": [ "administrative_area_level_2", "political" ]
+    }, {
+      "long_name": "British Columbia",
+      "short_name": "BC",
+      "types": [ "administrative_area_level_1", "political" ]
+    }, {
+      "long_name": "Canada",
+      "short_name": "CA",
+      "types": [ "country", "political" ]
+    } ],
+    "geometry": {
+      "location": {
+        "lat": 49.7268275,
+        "lng": -123.1264028
+      },
+      "location_type": "APPROXIMATE",
+      "viewport": {
+        "southwest": {
+          "lat": 49.6112841,
+          "lng": -123.3825216
+        },
+        "northeast": {
+          "lat": 49.8420966,
+          "lng": -122.8702840
+        }
+      },
+      "bounds": {
+        "southwest": {
+          "lat": 49.6388230,
+          "lng": -123.2602690
+        },
+        "northeast": {
+          "lat": 49.8743460,
+          "lng": -123.0894260
+        }
+      }
+    }
+  } ]
+}

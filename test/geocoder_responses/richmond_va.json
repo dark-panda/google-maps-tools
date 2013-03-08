@@ -1,0 +1,520 @@
+{
+  "status": "OK",
+  "results": [ {
+    "types": [ "colloquial_area", "political" ],
+    "formatted_address": "Richmond, Virginia, USA",
+    "address_components": [ {
+      "long_name": "Richmond",
+      "short_name": "Richmond",
+      "types": [ "colloquial_area", "political" ]
+    }, {
+      "long_name": "Virginia",
+      "short_name": "VA",
+      "types": [ "administrative_area_level_1", "political" ]
+    }, {
+      "long_name": "United States",
+      "short_name": "US",
+      "types": [ "country", "political" ]
+    } ],
+    "geometry": {
+      "location": {
+        "lat": 37.4689149,
+        "lng": -77.3783789
+      },
+      "location_type": "APPROXIMATE",
+      "viewport": {
+        "southwest": {
+          "lat": 36.8999918,
+          "lng": -78.4028540
+        },
+        "northeast": {
+          "lat": 38.0335409,
+          "lng": -76.3539038
+        }
+      },
+      "bounds": {
+        "southwest": {
+          "lat": 36.7076560,
+          "lng": -78.4650810
+        },
+        "northeast": {
+          "lat": 38.2526910,
+          "lng": -76.6456750
+        }
+      }
+    },
+    "partial_match": true
+  }, {
+    "types": [ "route" ],
+    "formatted_address": "Newbridge Rd, Highland Springs, VA, USA",
+    "address_components": [ {
+      "long_name": "Newbridge Rd",
+      "short_name": "Newbridge Rd",
+      "types": [ "route" ]
+    }, {
+      "long_name": "Richmond",
+      "short_name": "Richmond",
+      "types": [ "locality", "political" ]
+    }, {
+      "long_name": "Varina",
+      "short_name": "Varina",
+      "types": [ "administrative_area_level_3", "political" ]
+    }, {
+      "long_name": "Henrico",
+      "short_name": "Henrico",
+      "types": [ "administrative_area_level_2", "political" ]
+    }, {
+      "long_name": "Virginia",
+      "short_name": "VA",
+      "types": [ "administrative_area_level_1", "political" ]
+    }, {
+      "long_name": "United States",
+      "short_name": "US",
+      "types": [ "country", "political" ]
+    } ],
+    "geometry": {
+      "location": {
+        "lat": 37.5465729,
+        "lng": -77.3429777
+      },
+      "location_type": "GEOMETRIC_CENTER",
+      "viewport": {
+        "southwest": {
+          "lat": 37.5421918,
+          "lng": -77.3463944
+        },
+        "northeast": {
+          "lat": 37.5510500,
+          "lng": -77.3400991
+        }
+      },
+      "bounds": {
+        "southwest": {
+          "lat": 37.5421918,
+          "lng": -77.3440895
+        },
+        "northeast": {
+          "lat": 37.5510500,
+          "lng": -77.3424040
+        }
+      }
+    },
+    "partial_match": true
+  }, {
+    "types": [ "route" ],
+    "formatted_address": "Newquay Ln, Richmond, VA 23236, USA",
+    "address_components": [ {
+      "long_name": "Newquay Ln",
+      "short_name": "Newquay Ln",
+      "types": [ "route" ]
+    }, {
+      "long_name": "Richmond",
+      "short_name": "Richmond",
+      "types": [ "locality", "political" ]
+    }, {
+      "long_name": "Clover Hill",
+      "short_name": "Clover Hill",
+      "types": [ "administrative_area_level_3", "political" ]
+    }, {
+      "long_name": "Chesterfield",
+      "short_name": "Chesterfield",
+      "types": [ "administrative_area_level_2", "political" ]
+    }, {
+      "long_name": "Virginia",
+      "short_name": "VA",
+      "types": [ "administrative_area_level_1", "political" ]
+    }, {
+      "long_name": "United States",
+      "short_name": "US",
+      "types": [ "country", "political" ]
+    }, {
+      "long_name": "23236",
+      "short_name": "23236",
+      "types": [ "postal_code" ]
+    } ],
+    "geometry": {
+      "location": {
+        "lat": 37.4559993,
+        "lng": -77.5641580
+      },
+      "location_type": "GEOMETRIC_CENTER",
+      "viewport": {
+        "southwest": {
+          "lat": 37.4528164,
+          "lng": -77.5669903
+        },
+        "northeast": {
+          "lat": 37.4591116,
+          "lng": -77.5606951
+        }
+      },
+      "bounds": {
+        "southwest": {
+          "lat": 37.4533970,
+          "lng": -77.5667050
+        },
+        "northeast": {
+          "lat": 37.4585310,
+          "lng": -77.5609804
+        }
+      }
+    },
+    "partial_match": true
+  }, {
+    "types": [ "route" ],
+    "formatted_address": "Newbridge Cir, Richmond, VA 23223, USA",
+    "address_components": [ {
+      "long_name": "Newbridge Cir",
+      "short_name": "Newbridge Cir",
+      "types": [ "route" ]
+    }, {
+      "long_name": "Richmond",
+      "short_name": "Richmond",
+      "types": [ "locality", "political" ]
+    }, {
+      "long_name": "Varina",
+      "short_name": "Varina",
+      "types": [ "administrative_area_level_3", "political" ]
+    }, {
+      "long_name": "Henrico",
+      "short_name": "Henrico",
+      "types": [ "administrative_area_level_2", "political" ]
+    }, {
+      "long_name": "Virginia",
+      "short_name": "VA",
+      "types": [ "administrative_area_level_1", "political" ]
+    }, {
+      "long_name": "United States",
+      "short_name": "US",
+      "types": [ "country", "political" ]
+    }, {
+      "long_name": "23223",
+      "short_name": "23223",
+      "types": [ "postal_code" ]
+    } ],
+    "geometry": {
+      "location": {
+        "lat": 37.5475225,
+        "lng": -77.3414123
+      },
+      "location_type": "GEOMETRIC_CENTER",
+      "viewport": {
+        "southwest": {
+          "lat": 37.5446824,
+          "lng": -77.3449906
+        },
+        "northeast": {
+          "lat": 37.5509777,
+          "lng": -77.3386954
+        }
+      },
+      "bounds": {
+        "southwest": {
+          "lat": 37.5467960,
+          "lng": -77.3427431
+        },
+        "northeast": {
+          "lat": 37.5488641,
+          "lng": -77.3409429
+        }
+      }
+    },
+    "partial_match": true
+  }, {
+    "types": [ "bus_station", "transit_station" ],
+    "formatted_address": "New York + Georgia, Richmond, VA 23220, USA",
+    "address_components": [ {
+      "long_name": "New York + Georgia",
+      "short_name": "New York + Georgia",
+      "types": [ "bus_station", "transit_station" ]
+    }, {
+      "long_name": "Richmond",
+      "short_name": "Richmond",
+      "types": [ "locality", "political" ]
+    }, {
+      "long_name": "Virginia",
+      "short_name": "VA",
+      "types": [ "administrative_area_level_1", "political" ]
+    }, {
+      "long_name": "United States",
+      "short_name": "US",
+      "types": [ "country", "political" ]
+    }, {
+      "long_name": "23220",
+      "short_name": "23220",
+      "types": [ "postal_code" ]
+    } ],
+    "geometry": {
+      "location": {
+        "lat": 37.5330300,
+        "lng": -77.4727700
+      },
+      "location_type": "APPROXIMATE",
+      "viewport": {
+        "southwest": {
+          "lat": 37.5298824,
+          "lng": -77.4759176
+        },
+        "northeast": {
+          "lat": 37.5361776,
+          "lng": -77.4696224
+        }
+      }
+    },
+    "partial_match": true
+  }, {
+    "types": [ "bus_station", "transit_station" ],
+    "formatted_address": "New York + Carter, Richmond, VA 23220, USA",
+    "address_components": [ {
+      "long_name": "New York + Carter",
+      "short_name": "New York + Carter",
+      "types": [ "bus_station", "transit_station" ]
+    }, {
+      "long_name": "Richmond",
+      "short_name": "Richmond",
+      "types": [ "locality", "political" ]
+    }, {
+      "long_name": "Virginia",
+      "short_name": "VA",
+      "types": [ "administrative_area_level_1", "political" ]
+    }, {
+      "long_name": "United States",
+      "short_name": "US",
+      "types": [ "country", "political" ]
+    }, {
+      "long_name": "23220",
+      "short_name": "23220",
+      "types": [ "postal_code" ]
+    } ],
+    "geometry": {
+      "location": {
+        "lat": 37.5329900,
+        "lng": -77.4710000
+      },
+      "location_type": "APPROXIMATE",
+      "viewport": {
+        "southwest": {
+          "lat": 37.5298424,
+          "lng": -77.4741476
+        },
+        "northeast": {
+          "lat": 37.5361376,
+          "lng": -77.4678524
+        }
+      }
+    },
+    "partial_match": true
+  }, {
+    "types": [ "route" ],
+    "formatted_address": "New St, Ashland, VA 23005, USA",
+    "address_components": [ {
+      "long_name": "New St",
+      "short_name": "New St",
+      "types": [ "route" ]
+    }, {
+      "long_name": "Ashland",
+      "short_name": "Ashland",
+      "types": [ "locality", "political" ]
+    }, {
+      "long_name": "Ashland",
+      "short_name": "Ashland",
+      "types": [ "administrative_area_level_3", "political" ]
+    }, {
+      "long_name": "Hanover",
+      "short_name": "Hanover",
+      "types": [ "administrative_area_level_2", "political" ]
+    }, {
+      "long_name": "Virginia",
+      "short_name": "VA",
+      "types": [ "administrative_area_level_1", "political" ]
+    }, {
+      "long_name": "United States",
+      "short_name": "US",
+      "types": [ "country", "political" ]
+    }, {
+      "long_name": "23005",
+      "short_name": "23005",
+      "types": [ "postal_code" ]
+    } ],
+    "geometry": {
+      "location": {
+        "lat": 37.7523130,
+        "lng": -77.4785410
+      },
+      "location_type": "GEOMETRIC_CENTER",
+      "viewport": {
+        "southwest": {
+          "lat": 37.7490329,
+          "lng": -77.4831632
+        },
+        "northeast": {
+          "lat": 37.7553281,
+          "lng": -77.4743308
+        }
+      },
+      "bounds": {
+        "southwest": {
+          "lat": 37.7515860,
+          "lng": -77.4831632
+        },
+        "northeast": {
+          "lat": 37.7527750,
+          "lng": -77.4743308
+        }
+      }
+    },
+    "partial_match": true
+  }, {
+    "types": [ "route" ],
+    "formatted_address": "New St, Waverly, VA 23890, USA",
+    "address_components": [ {
+      "long_name": "New St",
+      "short_name": "New St",
+      "types": [ "route" ]
+    }, {
+      "long_name": "Waverly",
+      "short_name": "Waverly",
+      "types": [ "locality", "political" ]
+    }, {
+      "long_name": "Waverly",
+      "short_name": "Waverly",
+      "types": [ "administrative_area_level_3", "political" ]
+    }, {
+      "long_name": "Sussex",
+      "short_name": "Sussex",
+      "types": [ "administrative_area_level_2", "political" ]
+    }, {
+      "long_name": "Virginia",
+      "short_name": "VA",
+      "types": [ "administrative_area_level_1", "political" ]
+    }, {
+      "long_name": "United States",
+      "short_name": "US",
+      "types": [ "country", "political" ]
+    }, {
+      "long_name": "23890",
+      "short_name": "23890",
+      "types": [ "postal_code" ]
+    } ],
+    "geometry": {
+      "location": {
+        "lat": 37.0372768,
+        "lng": -77.1018151
+      },
+      "location_type": "GEOMETRIC_CENTER",
+      "viewport": {
+        "southwest": {
+          "lat": 37.0335499,
+          "lng": -77.1040454
+        },
+        "northeast": {
+          "lat": 37.0398452,
+          "lng": -77.0977501
+        }
+      },
+      "bounds": {
+        "southwest": {
+          "lat": 37.0338769,
+          "lng": -77.1022513
+        },
+        "northeast": {
+          "lat": 37.0395182,
+          "lng": -77.0995442
+        }
+      }
+    },
+    "partial_match": true
+  }, {
+    "types": [ "route" ],
+    "formatted_address": "New Bridge Rd, Mineral, VA, USA",
+    "address_components": [ {
+      "long_name": "New Bridge Rd",
+      "short_name": "New Bridge Rd",
+      "types": [ "route" ]
+    }, {
+      "long_name": "Mineral",
+      "short_name": "Mineral",
+      "types": [ "locality", "political" ]
+    }, {
+      "long_name": "Virginia",
+      "short_name": "VA",
+      "types": [ "administrative_area_level_1", "political" ]
+    }, {
+      "long_name": "United States",
+      "short_name": "US",
+      "types": [ "country", "political" ]
+    } ],
+    "geometry": {
+      "location": {
+        "lat": 38.0838870,
+        "lng": -77.8467029
+      },
+      "location_type": "GEOMETRIC_CENTER",
+      "viewport": {
+        "southwest": {
+          "lat": 38.0791007,
+          "lng": -77.8794265
+        },
+        "northeast": {
+          "lat": 38.0853959,
+          "lng": -77.8126880
+        }
+      },
+      "bounds": {
+        "southwest": {
+          "lat": 38.0791257,
+          "lng": -77.8794265
+        },
+        "northeast": {
+          "lat": 38.0853709,
+          "lng": -77.8126880
+        }
+      }
+    },
+    "partial_match": true
+  }, {
+    "types": [ "route" ],
+    "formatted_address": "Newtown Rd, VA, USA",
+    "address_components": [ {
+      "long_name": "Newtown Rd",
+      "short_name": "Newtown Rd",
+      "types": [ "route" ]
+    }, {
+      "long_name": "Virginia",
+      "short_name": "VA",
+      "types": [ "administrative_area_level_1", "political" ]
+    }, {
+      "long_name": "United States",
+      "short_name": "US",
+      "types": [ "country", "political" ]
+    } ],
+    "geometry": {
+      "location": {
+        "lat": 37.9149506,
+        "lng": -77.1384571
+      },
+      "location_type": "GEOMETRIC_CENTER",
+      "viewport": {
+        "southwest": {
+          "lat": 37.8034947,
+          "lng": -77.2302259
+        },
+        "northeast": {
+          "lat": 37.9915341,
+          "lng": -77.0539641
+        }
+      },
+      "bounds": {
+        "southwest": {
+          "lat": 37.8034947,
+          "lng": -77.2302259
+        },
+        "northeast": {
+          "lat": 37.9915341,
+          "lng": -77.0539641
+        }
+      }
+    },
+    "partial_match": true
+  } ]
+}

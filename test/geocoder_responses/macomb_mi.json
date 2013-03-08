@@ -1,0 +1,47 @@
+{
+  "status": "OK",
+  "results": [ {
+    "types": [ "administrative_area_level_2", "political" ],
+    "formatted_address": "Macomb, Michigan, USA",
+    "address_components": [ {
+      "long_name": "Macomb",
+      "short_name": "Macomb",
+      "types": [ "administrative_area_level_2", "political" ]
+    }, {
+      "long_name": "Michigan",
+      "short_name": "MI",
+      "types": [ "administrative_area_level_1", "political" ]
+    }, {
+      "long_name": "United States",
+      "short_name": "US",
+      "types": [ "country", "political" ]
+    } ],
+    "geometry": {
+      "location": {
+        "lat": 42.7168759,
+        "lng": -82.8209740
+      },
+      "location_type": "APPROXIMATE",
+      "viewport": {
+        "southwest": {
+          "lat": 42.5855702,
+          "lng": -83.0770928
+        },
+        "northeast": {
+          "lat": 42.8479043,
+          "lng": -82.5648552
+        }
+      },
+      "bounds": {
+        "southwest": {
+          "lat": 42.4470550,
+          "lng": -83.1028910
+        },
+        "northeast": {
+          "lat": 42.8975409,
+          "lng": -82.7059659
+        }
+      }
+    }
+  } ]
+}

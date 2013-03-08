@@ -1,0 +1,59 @@
+{
+  "status": "OK",
+  "results": [ {
+    "types": [ "neighborhood", "political" ],
+    "formatted_address": "Sun Valley, Los Angeles, CA, USA",
+    "address_components": [ {
+      "long_name": "Sun Valley",
+      "short_name": "Sun Valley",
+      "types": [ "neighborhood", "political" ]
+    }, {
+      "long_name": "Los Angeles",
+      "short_name": "Los Angeles",
+      "types": [ "locality", "political" ]
+    }, {
+      "long_name": "San Fernando Valley",
+      "short_name": "San Fernando Valley",
+      "types": [ "administrative_area_level_3", "political" ]
+    }, {
+      "long_name": "Los Angeles",
+      "short_name": "Los Angeles",
+      "types": [ "administrative_area_level_2", "political" ]
+    }, {
+      "long_name": "California",
+      "short_name": "CA",
+      "types": [ "administrative_area_level_1", "political" ]
+    }, {
+      "long_name": "United States",
+      "short_name": "US",
+      "types": [ "country", "political" ]
+    } ],
+    "geometry": {
+      "location": {
+        "lat": 34.2175042,
+        "lng": -118.3703576
+      },
+      "location_type": "APPROXIMATE",
+      "viewport": {
+        "southwest": {
+          "lat": 34.1805896,
+          "lng": -118.4343873
+        },
+        "northeast": {
+          "lat": 34.2544027,
+          "lng": -118.3063279
+        }
+      },
+      "bounds": {
+        "southwest": {
+          "lat": 34.2059040,
+          "lng": -118.4201150
+        },
+        "northeast": {
+          "lat": 34.2601540,
+          "lng": -118.2902101
+        }
+      }
+    }
+  } ]
+}

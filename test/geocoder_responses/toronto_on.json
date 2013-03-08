@@ -1,0 +1,51 @@
+{
+  "status": "OK",
+  "results": [ {
+    "types": [ "locality", "political" ],
+    "formatted_address": "Toronto, ON, Canada",
+    "address_components": [ {
+      "long_name": "Toronto",
+      "short_name": "Toronto",
+      "types": [ "locality", "political" ]
+    }, {
+      "long_name": "Toronto Division",
+      "short_name": "Toronto Division",
+      "types": [ "administrative_area_level_2", "political" ]
+    }, {
+      "long_name": "Ontario",
+      "short_name": "ON",
+      "types": [ "administrative_area_level_1", "political" ]
+    }, {
+      "long_name": "Canada",
+      "short_name": "CA",
+      "types": [ "country", "political" ]
+    } ],
+    "geometry": {
+      "location": {
+        "lat": 43.6525000,
+        "lng": -79.3816667
+      },
+      "location_type": "APPROXIMATE",
+      "viewport": {
+        "southwest": {
+          "lat": 43.5231891,
+          "lng": -79.6377855
+        },
+        "northeast": {
+          "lat": 43.7815330,
+          "lng": -79.1255479
+        }
+      },
+      "bounds": {
+        "southwest": {
+          "lat": 43.4582970,
+          "lng": -79.6392190
+        },
+        "northeast": {
+          "lat": 43.8554580,
+          "lng": -79.0024810
+        }
+      }
+    }
+  } ]
+}
