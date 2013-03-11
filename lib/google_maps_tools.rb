@@ -14,5 +14,7 @@ module GoogleMapsTools
     File.join(GOOGLE_MAPS_TOOLS_BASE, %w{ google_maps_tools projection })
   autoload :QuadTree,
     File.join(GOOGLE_MAPS_TOOLS_BASE, %w{ google_maps_tools quad_tree })
+  autoload :UrlSigner,
+    File.join(GOOGLE_MAPS_TOOLS_BASE, %w{ google_maps_tools url_signer })
 end
 
