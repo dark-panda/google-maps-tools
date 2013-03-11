@@ -36,13 +36,13 @@ class GoogleMapsTools::GeocoderResponse
 
   def build_name(components, idx = 0)
     return if self.geocode['status'] != 'OK'
-    return unless present?(components)
+    return unless data_present?(components)
 
     ret = components.inject([]) { |memo, value|
       self.component_injector(memo, value, idx)
     }.compact
 
-    ret.join(', ') if present?(ret)
+    ret.join(', ') if data_present?(ret)
   end
 
   def short_components(*args)
@@ -307,7 +307,7 @@ class GoogleMapsTools::GeocoderResponse
       end
     end
 
-    def present?(what)
+    def data_present?(what)
       if what.respond_to?(:empty?)
         !what.empty?
       else
