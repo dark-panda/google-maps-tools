@@ -3,7 +3,7 @@
 $: << File.dirname(__FILE__)
 require 'test_helper'
 
-class GoogleMapsGeocodeTest
+class GoogleMapsGeocoderResponseTest
   %w{
     hot_springs_national_park.json
     macomb_mi.json
