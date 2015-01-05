@@ -3,7 +3,7 @@
 require File.expand_path('../lib/google_maps_tools/version', __FILE__)
 
 Gem::Specification.new do |s|
-  s.name = "gmaps-tools"
+  s.name = "google-maps-tools"
   s.version = GoogleMapsTools::VERSION
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.files = `git ls-files`.split($\)
   s.executables = s.files.grep(%r{^bin/}).map { |f| File.basename(f) }
   s.test_files = s.files.grep(%r{^(test|spec|features)/})
-  s.homepage = "https://git.i.internal/ruby/gmap-tools"
+  s.homepage = "https://github.com/zoocasa/google-maps-tools"
   s.require_paths = ["lib"]
 
   s.add_dependency("activesupport", [">= 2.3"])
