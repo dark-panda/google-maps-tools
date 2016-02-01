@@ -27,7 +27,7 @@ class GoogleMapsTools::GeocoderResponse
         'status' => 'OK'
       }
     else
-      raise ArgumentError.new("Couldn't parse JSON into GoogleMapsGeocde")
+      raise ArgumentError.new("Couldn't parse JSON into GeocoderResponse")
     end
 
     @results = @geocode['results']
