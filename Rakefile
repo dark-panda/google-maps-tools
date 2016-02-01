@@ -21,7 +21,7 @@ end
 desc 'Build docs'
 Rake::RDocTask.new do |t|
   t.main = 'README.rdoc'
-  t.title = "Zoocasa GoogleMapsTools #{version}"
+  t.title = "GoogleMapsTools #{version}"
   t.rdoc_dir = 'doc'
   t.rdoc_files.include('README.rdoc', 'lib/**/*.rb')
 end
